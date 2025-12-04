@@ -4,6 +4,30 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { RoundedBox, Environment, Float, ContactShadows, Text, useCursor, RenderTexture, PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
 
+// Add type augmentation to fix JSX.IntrinsicElements errors for R3F elements
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      mesh: any;
+      group: any;
+      circleGeometry: any;
+      meshBasicMaterial: any;
+      ringGeometry: any;
+      planeGeometry: any;
+      boxGeometry: any;
+      meshStandardMaterial: any;
+      capsuleGeometry: any;
+      primitive: any;
+      ambientLight: any;
+      spotLight: any;
+      pointLight: any;
+      color: any;
+      icosahedronGeometry: any;
+      sphereGeometry: any;
+    }
+  }
+}
+
 // --- Reusable Materials ---
 const bodyMaterial = new THREE.MeshStandardMaterial({
   color: "#1a1a1a",
