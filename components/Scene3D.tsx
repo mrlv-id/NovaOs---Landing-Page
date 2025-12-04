@@ -8,22 +8,7 @@ import * as THREE from 'three';
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      mesh: any;
-      group: any;
-      circleGeometry: any;
-      meshBasicMaterial: any;
-      ringGeometry: any;
-      planeGeometry: any;
-      boxGeometry: any;
-      meshStandardMaterial: any;
-      capsuleGeometry: any;
-      primitive: any;
-      ambientLight: any;
-      spotLight: any;
-      pointLight: any;
-      color: any;
-      icosahedronGeometry: any;
-      sphereGeometry: any;
+      [elemName: string]: any;
     }
   }
 }
